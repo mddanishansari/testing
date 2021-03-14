@@ -34,6 +34,7 @@ jobs:
         with:
           body: ${{steps.github_release.outputs.changelog}}
           prerelease: ${{ contains(github.event.inputs.version, '-rc') || contains(github.event.inputs.version, '-b') || contains(github.event.inputs.version, '-a') }}
-          files: build/index.jar
+          files: |
+            build/index.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
