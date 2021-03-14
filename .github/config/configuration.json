@@ -4,14 +4,18 @@
             "title": "## 🌟 Features",
             "labels": [
                 "🚀",
-                "🌟"
+                "🌟",
+                "implement",
+                "feature"
             ]
         },
         {
             "title": "## 🐛 Fixes",
             "labels": [
                 "🐛",
-                "🚑"
+                "🚑",
+                "fix",
+                "bug"
             ]
         },
         {
