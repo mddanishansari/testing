@@ -29,6 +29,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Archive Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          if-no-files-found: ignore
+          path: |
+            build/index.jar
+            
       - name: Release
         uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
         with:
