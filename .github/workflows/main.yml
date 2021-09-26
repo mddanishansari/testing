@@ -32,8 +32,6 @@ jobs:
           distribution: 'adopt'       
 
       - name: Compile
-        env: 
-         SOME_KEY: ${{ secrets.TOP_SECRET_KEY }}
         run: javac Main.java
         
       - name: Run
