@@ -17,6 +17,9 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env: 
+      SOME_KEY: ${{ secrets.TOP_SECRET_KEY }}   
+      
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -34,7 +37,5 @@ jobs:
       - name: Compile
         run: javac Main.java
         
-      - name: Run
-        env: 
-         SOME_KEY: ${{ secrets.TOP_SECRET_KEY }}      
+      - name: Run   
         run: java Main        
